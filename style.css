@@ -58,7 +58,7 @@
 
 .nav-buttons {
   display: flex;
-  gap: 15px; /* Adds space between the buttons */
+  gap: 15px;
 }
 
 .nav-btn {
@@ -79,8 +79,8 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;  /* Stack elements vertically (Title -> Grid 1 -> Grid 2) */
-    align-items: center;     /* Perfectly center everything horizontally on the page */
+    flex-direction: column;  
+    align-items: center;   
     width: 100%;
 }
 
@@ -90,10 +90,8 @@ body {
 }
 
 /* Image grids */
-/* The Grid Container stays the same, but you may want wider columns */
 .character-grid {
   display: grid;
-  /* Increased minimum width to 450px to fit side-by-side content comfortably */
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 20px;
   padding: 20px;
@@ -106,26 +104,25 @@ body {
   padding: 16px;
   background-color: #fff;
   
-  display: flex;         /* Activates flexbox */
-  flex-direction: row;   /* Aligns image and text side-by-side */
-  gap: 16px;             /* Spacing between image and text container */
-  align-items: center;   /* Centers items vertically */
+  display: flex;         
+  flex-direction: row;   
+  gap: 16px;             
+  align-items: center;   
 }
 
 /* Updated Image Styling */
 .character-img {
-  width: 150px;          /* Fixed width for the horizontal look */
-  height: 150px;         /* Square aspect ratio */
+  width: 150px;          
+  height: 150px;         
   object-fit: cover;
   border-radius: 4px;
-  flex-shrink: 0;        /* Prevents the image from squeezing */
+  flex-shrink: 0;        
 }
 
 /* New Text Container Wrapper */
-/* Note: Wrap your title, description, and button in a <div> inside your HTML */
 .character-info {
   display: flex;
-  flex-direction: column; /* Keeps text elements stacked vertically */
+  flex-direction: column; 
   justify-content: center;
   height: 100%;
 }
@@ -142,7 +139,7 @@ body {
 }
 
 .view-details-btn {
-  align-self: flex-start; /* Prevents the button from stretching to full width */
+  align-self: flex-start; 
   padding: 8px 16px;
   background-color: #007bff;
   color: white;
@@ -155,22 +152,22 @@ body {
 /* DETAIL PAGE INFO */
 .character-profile-layout {
     display: flex;
-    gap: 24px;         /* Adds space between the left and right columns */
+    gap: 24px;         
     padding: 20px;
-    max-width: 1200px; /* Limits the max width so it doesn't stretch too wide */
-    margin: 0 auto;    /* Centers the entire layout on the screen */
+    max-width: 1200px; 
+    margin: 0 auto;   
 }
 
-/* 2. Sets up the left side as a vertical stack */
+/* Sets up the left column */
 .quadrant-left {
-    flex: 1;           /* Takes up less space (approx 1/3 of the layout) */
-    min-width: 250px;  /* Keeps the image column from getting squished */
+    flex: 1;           
+    min-width: 250px;  
     display: flex;
     flex-direction: column; 
-    gap: 16px;         /* Adds space between the picture and the stats below it */
+    gap: 16px;         
 }
 
-/* Forces the picture to cleanly fit its box */
+/* Forces image into the box */
 .quad-image img {
     width: 100%;
     height: auto;
@@ -178,16 +175,16 @@ body {
     object-fit: cover;
 }
 
-/* Styling for your quick stats bucket */
+/* Styling for your quick details bucket */
 .quad-quick-details {
     background-color: #f5f5f5;
     padding: 16px;
     border-radius: 8px;
 }
 
-/* 3. Sets up the right side for heavy reading */
+/* Quadrant for the lore and biology */
 .quadrant-right-lore {
-    flex: 2;           /* Takes up twice as much space as the left column */
+    flex: 2;           /* To take up more space for the layout */
     background-color: #ffffff;
     padding: 24px;
     border-radius: 8px;
